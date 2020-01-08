@@ -1,0 +1,101 @@
+section.partners
+
+  background-color: $color-bg-partners
+  min-height: 600px
+
+  color: #444
+
+  .col-spread
+    text-align: center
+    margin: 0 auto 2rem
+    padding: 0 2rem
+
+
+
+  .col-1
+    width: 401px
+    // height: 340px
+
+    justify-content: center
+    position: relative
+    // border: 1px solid #eee
+    margin-bottom: 1rem
+    // background: white
+    +transition
+
+    &.col--partners
+      margin-right: 1rem
+
+    &.col--member
+      margin-left: 1rem
+
+
+
+    &:hover
+
+      background: rgba($background-color, .04)
+
+      .col-content
+        // background: rgba($background-color, .95)
+
+
+
+
+
+    .col-content
+
+      opacity: 1
+      +transition
+      // @include position (absolute, 0)
+      background:
+        color: transparent
+
+      // border-radius: 50%
+      display: flex
+      flex-direction: column
+      color: white
+      padding: 1.5rem 3rem
+      text-align: center
+      // @include position(absolute, -2px)
+
+      h1
+        color: $brand-color
+
+      p
+        font-weight: 300
+        color: black
+        // height: 5rem
+
+
+
+  @media (max-width: 1024px)
+    .flex
+      display: block
+
+    .col-1
+      margin: 1rem auto !important
+      // background: rgba($background-color, .95)
+
+      .col-content
+        padding: 20px 30px
+
+        p
+          // color: white
+
+  @media (max-width: 800px)
+    .col-1
+      filter: none
+
+      .col-content
+        opacity: 1 !important
+
+  @media (max-width: 480px)
+    .col-1
+      border-radius: 0
+      width: 96%
+      // height: 250px
+      padding: 1rem 0
+      margin: 1rem auto
+
+      .col-content
+        border-radius: 0

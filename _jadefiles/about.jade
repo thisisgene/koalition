@@ -1,0 +1,102 @@
+section.section-about#about
+  {% assign pages = site.pages | where: 'ref', 'about' %}
+  
+  
+  {% for this_page in pages %}
+  
+  {% if this_page.language == page.language %}
+
+  {{this_page.content}}
+  
+  {% endif %}
+  
+  {% endfor %}
+
+
+
+  //- 
+  //- {% assign posts = site.posts | where:'categories', 'about' %}
+  //- {% assign lang_posts=posts | where:'language', page.language %}
+  //- 
+  //- {% for post in lang_posts %}
+  //- 
+  //- //- main
+  //- {% if post.title == 'about_main' %}
+  //- {% assign mainHeader = post.header %}  
+  //- {% assign mainContent = post.content %}  
+  //- {% endif %}
+  //- 
+  //- //- participation
+  //- {% if post.title == 'about_participation' %}
+  //- {% assign participationHeader = post.header %}  
+  //- {% assign participationContent = post.content %}  
+  //- {% endif %}
+  //- 
+  //- //- integration
+  //- {% if post.title == 'about_integration' %}
+  //- {% assign integrationHeader = post.header %}  
+  //- {% assign integrationContent = post.content %}  
+  //- {% endif %}
+  //- 
+  //- //- sustainability
+  //- {% if post.title == 'about_sustainability' %}
+  //- {% assign sustainabilityHeader = post.header %}  
+  //- {% assign sustainabilityContent = post.content %}  
+  //- 
+  //- {% endif %}
+  //- 
+  //- {% endfor %}
+  //- 
+  //- .flex.flex--center
+  //-   .col-spread
+  //-     h1.title-text {{mainHeader}}
+  //-     
+  //-     .lead-text 
+  //-       {{mainContent}}
+  //- 
+  //-     .about-cta.button-cta read more
+  //- 
+  //- #about-block
+  //-   .block.block--about
+  //-     .col-full
+  //-       .about-block--info
+  //-         h2.title-text {{participationHeader}}
+  //-         .lead-text {{participationContent}}
+  //-     
+  //-     .col-full
+  //-       .about-block--info
+  //-         h2.title-text {{integrationHeader}}
+  //-         .lead-text {{integrationContent}}
+  //-       
+  //-     .col-full
+  //-       .about-block--info
+  //-         h2.title-text {{sustainabilityHeader}}
+  //-         .lead-text {{sustainabilityContent}}
+  //-     
+  //-   
+  //-     
+  //- 
+  //- 
+  //-       
+  //-     //- ul.bullets
+  //-     //-   li.bullet
+  //-     //-     .bullet-icon.bullet-icon-1
+  //-     //-       img(src='https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png', alt='')
+  //-     //-     .bullet-content
+  //-     //-       h2 {{participationHeader}}
+  //-     //-       p {{participationContent}}
+  //-     //-   li.bullet
+  //-     //-     .bullet-icon.bullet-icon-2
+  //-     //-       img(src='https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png', alt='')
+  //-     //-     .bullet-content
+  //-     //-       h2 {{integrationHeader}}
+  //-     //-       p {{integrationContent}}
+  //-     //-   li.bullet
+  //-     //-     .bullet-icon.bullet-icon-3
+  //-     //-       img(src='https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png', alt='')
+  //-     //-     .bullet-content
+  //-     //-       h2 Last Bullet Title
+  //-     //-       p
+  //-     //-         | Lorem ipsum sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.
+  //-     //- 
+  //-   

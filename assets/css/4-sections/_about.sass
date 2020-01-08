@@ -1,0 +1,123 @@
+$about-border-radius: 20px
+
+.section-about
+  background: $color-bg-about
+  // @include linear-gradient(to left, lighten($aqua, 28%), lighten($aqua, 12%))
+  // min-height: 100vh
+  display: flex
+  justify-content: center
+  flex-direction: column
+
+  // padding: 0 !important
+
+  .col-lead
+    +transition
+
+
+  .title-text
+    color: white
+    margin-bottom: 3rem
+
+  .lead-text
+    color: $white
+    // text-align: center
+    font-size: 1.1rem
+    margin: 4rem 0
+
+  .button-cta
+    // background: rgba(white, .5)
+    border: 1px solid $bg-main
+    margin: 3rem 0
+    transform: scale(1)
+
+    &:hover
+      background: darken($bg-main, 10%)
+
+    &.hidden
+      display: none
+
+
+  #about-block
+    overflow: hidden
+
+
+
+
+    .block
+      // padding: 2rem 0 0
+      // position: absolute
+      display: none
+      background: $color-bg-about
+
+      position: relative
+
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        height: 150px
+        // @include linear-gradient(to bottom, $bg-main, lighten($bg-main, 12%))
+
+      &:after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        height: 100px
+        // @include linear-gradient(to top, $bg-main, lighten($bg-main, 12%))
+
+      &.is-open
+        display: block
+        // opacity: 0
+        animation: slideIn 600ms ease-in-out
+        z-index: 3
+
+      @keyframes slideIn
+        0%
+          opacity: 0
+          transform: translateY(-1000px)
+        40%
+          opacity: 1
+        100%
+          opacity: 1
+          transform: translateY(0px)
+
+      .col-full
+        margin: 3rem auto
+        max-width: 680px
+        text-align: center
+        padding: 0 2rem
+
+        z-index: 4
+
+
+        h2
+          font-size: 1.6rem
+          border-bottom: 1px solid transparentize(#fff, 0.6)
+          display: inline-block
+          margin: .4rem 0 .2rem 0
+          color: $white
+
+        .lead-text
+          color: $black
+          text-align: left
+          font-size: 1rem
+
+          ul
+            list-style: circle
+            padding-left: 2rem
+
+            li
+              margin: .2rem 0
+
+
+  @media (max-width: 640px)
+    .col-lead
+      margin: 0 1rem
+
+
+    .col-full
+      padding: 0 1.5rem !important

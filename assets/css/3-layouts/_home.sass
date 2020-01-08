@@ -1,0 +1,134 @@
+.home-wrap
+  display: flex
+  overflow: hidden
+
+  @media (max-width: 800px)
+    display: block
+    background: white
+
+.main-wrapper
+  flex: 1
+  position: relative
+  margin-bottom: 205px
+  margin-left: 200px
+  z-index: 2
+  background: white
+
+.home-sections
+
+  section
+    padding: 3rem 0
+
+  .flex
+    display: flex
+    flex-direction: row
+
+  .flex--center
+    justify-content: center
+
+  // .flex--center-center
+  //   align-items: center
+
+  .flex--space-around
+    justify-content: space-around
+
+  .order-first
+    order: -1
+
+  .block
+    display: block
+
+  .block--left-right
+    @include clearfix
+
+
+
+// columns
+
+.col-1
+  max-width: 460px
+
+.col-2
+  max-width: 18.75rem
+  margin: 0 .5rem
+
+.col-full
+  // max-width: 39rem
+  margin: 0 2.5rem
+
+.col-lead
+  max-width: 680px
+  margin: 0 2.5rem
+
+.col-spread
+  max-width: 680px
+  text-align: center
+  margin: 0 auto 2rem
+  padding: 0 2rem
+
+.col-3
+  max-width: 32%
+  margin: 0 .5rem
+
+.col-side
+  max-width: 80%
+  display: block
+  @include clearfix
+
+
+.col-side--left
+  float: left
+
+.col-side--right
+  float: right
+
+@media (max-width: 800px)
+  .main-wrapper
+    margin-left: 0
+    margin-bottom: 205px
+
+
+@media (max-width: 640px)
+  .home-sections .flex
+    // display: block
+
+  .col-2, .col-3, .col-side, .col-spread
+    max-width: 100%
+    margin: 0 .5rem
+
+    padding: 0 .5rem
+
+// TYPOGRAPHY
+
+h1, h2, h3
+  font-weight: 300
+
+p
+  font-family: 'Roboto'
+
+.title-text
+  font:
+    family: 'Raleway'
+    size: 4rem
+    weight: light
+
+  margin: 1rem 0
+  line-height: 1
+  // letter-spacing: .1rem
+  text-align: center
+  text-transform: uppercase
+
+  &.small
+    font:
+      size: 1.6rem
+      weight: 300
+
+
+
+  @media (max-width: 500px)
+    font-size: 3rem
+
+
+.lead-text
+  font-size: 1rem
+  letter-spacing: .1rem

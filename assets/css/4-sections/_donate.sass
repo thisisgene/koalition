@@ -1,0 +1,202 @@
+section.donate
+  position: relative
+  background:
+    // color: $brand-color
+    image: url(../img/donate-bg_plain.jpg)
+    repeat: no-repeat
+    size: cover
+    position: center
+  .donate-wrapper
+
+
+    // &:after
+    //   content: ''
+    //   +position(absolute, 0)
+    //   background: rgba($brand-color, .8)
+
+      // rgba(darken($highlight-color, 20%), .9)
+
+    .col-spread
+      color: white
+      text-align: center
+      z-index: 2
+
+      h2
+        font-size: 1.5rem
+        color: #555
+        text-align: center
+
+
+
+      .donate-info-box
+        width: 480px
+        margin: 3rem auto
+        top: -30px
+        position: relative
+        padding: 2rem 0
+        // top: 24px
+        border-radius: 1rem
+        // box-shadow: 0 0 0 .3rem rgba(black, .5) inset
+        text-align: center
+        background: rgba(black, .3)
+        // #665614
+        +transition
+        z-index: -1
+
+        // &:hover
+        //
+        //   .donate-info
+        //     background: rgba(white, 1)
+        //
+        //     .bank-wrap
+        //       background: rgba(lighten($bg-main, 10%), .2)
+        //       color: #444
+
+        .bow
+          position: absolute
+          height: 0
+          top: 0
+          width: 100%
+          z-index: -10
+
+          &__container
+            position: absolute
+            $height: 11rem
+            height: $height
+            top: -$height
+            line-height: $height
+            width: 100%
+            text-align: center
+            pointer-events: none
+
+            img
+              vertical-align: bottom
+              position: relative
+              bottom: 0
+              width: 60%
+              margin: 0 auto
+
+        .box-top
+          position: absolute
+          height: 0
+          top: 0
+          width: 100%
+
+          &__container
+            position: absolute
+            top: 0
+            $height: 6rem
+            height: $height
+            text-align: center
+            width: 100%
+
+            .box-top-element
+              position: relative
+              width: 100%
+              transform: scaleX(1.1)
+              margin: 0 auto
+              height: 100px
+              background: #665614
+              z-index: -1
+              border-radius: 1rem
+
+
+        .gift-wrap
+          position: absolute
+
+          top: 0
+          bottom: 0
+          width: 4rem
+          min-height: 100px
+          margin: 0 auto
+
+          z-index: -1 !important
+
+        .gift-wrap--left
+          background: $brand-color
+          left: 50%
+          // margin-left: -3rem
+        .gift-wrap--right
+
+          background: tint($brand-color, 30%)
+          right: 50%
+          // margin-right: -3rem
+
+
+        .donate-info
+          z-index: 10 !important
+          padding: 1rem 3rem 2rem
+          // background: rgba(white, .9)
+          // border: 3px dashed rgba(#665614, .5)
+          border-radius: .8rem
+          margin: 0 3rem
+
+          h2
+            color: white
+          //   font-weight: bold
+          //   margin: .5rem 0 .1rem
+          //   @include user-select(none)
+            // text-transform: uppercase
+            // font-size: .9rem
+
+          .bank-wrap
+            background: rgba(white, .9)
+            padding: .5rem
+            border-radius: .4rem
+            margin-bottom: .4rem
+
+            .bank-head
+              display: inline-block
+              color: #999
+              font-weight: bold
+              margin: .5rem 0 .1rem
+              @include user-select(none)
+              text-transform: uppercase
+              font-size: .9rem
+              margin-right: .4rem
+
+
+            .bank-body
+              display: inline-block
+              border-radius: 4px
+              color: #666
+              // border: 1px dotted rgba(black, .2)
+              font:
+                family: 'Roboto Condensed'
+                size: 1rem
+              margin: 0
+              @media (max-width: 800px)
+
+                font-size: 1rem
+
+      @media only screen and (max-width: 321px) and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2)
+
+        .donate-info-box
+          z-index: 0 !important
+
+
+
+  @media (max-width: 560px)
+    .donate-wrapper
+
+      .col-spread
+        .donate-info-box
+          width: 100%
+
+
+          .donate-info
+            padding: 1rem
+            margin: 0 1rem
+
+  @media (max-width: 465px)
+    .donate-wrapper
+
+      .col-spread
+        .donate-info-box
+          padding: 1rem 0
+          width: 100%
+
+          .bow .bow__container
+
+            img
+              width: 80%

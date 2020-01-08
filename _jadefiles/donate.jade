@@ -1,0 +1,14 @@
+section.donate#donate
+  .donate-wrapper
+    {% assign pages = site.pages | where: 'ref', 'donate' %}
+    
+    
+    {% for this_page in pages %}
+    
+    {% if this_page.language == page.language %}
+
+    {{this_page.content}}
+    
+    {% endif %}
+    
+    {% endfor %}

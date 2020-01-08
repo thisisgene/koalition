@@ -1,0 +1,192 @@
+.cards
+  color: #444
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+
+.card
+  $base-border-color: gainsboro !default
+  $base-border-radius: 3px !default
+  $base-background-color: #ccc !default
+  $base-spacing: 1.5em !default
+  $action-color: #477DCA !default
+  $dark-gray: #333 !default
+  $base-font-color: $dark-gray !default
+  $card-border-color: $base-border-color
+  $card-border: 1px solid $card-border-color
+  $card-background: lighten($card-border-color, 10%)
+  $card-header-background: $card-background
+  $card-margin: 1em
+  $card-image-hover-opacity: 0.7
+  $card-image-hover-color: lighten($brand-color, 20%)
+
+  background:
+    color: $card-background
+
+
+  // border: $card-border
+  border-radius: $base-border-radius
+  box-shadow: 0 2px 4px rgba(black, .2)
+  cursor: pointer
+  flex-basis: 15em
+  flex-grow: 1
+  margin: 0 $card-margin $base-spacing $card-margin
+  position: relative
+  transition: all 0.2s ease-in-out
+  height: 0%
+
+  .card-background
+    opacity: 0
+    +position(absolute, 0)
+    transition: all 200ms ease-in-out
+    transform: rotateY(180deg)
+    border: 1px solid #bbb
+    background:
+      size: cover !important
+      position: center center !important
+      repeat: no-repeat
+    +filter(grayscale(60%))
+    // z-index: -1
+
+    &:after
+      content: ''
+      +position(absolute, 0)
+      background: rgba(white, .85)
+
+
+  .card-short
+    // background: rgba($card-background, .8)
+    // display: none
+
+  .card-long
+    color: #000
+    +position(relative, 0)
+    padding: .8rem 1.6rem
+    display: none
+
+    h1
+      font-size: 1.3rem
+      text-align: center
+      // +stroke(1px, white)
+
+    p
+      font-size: .9rem
+
+
+
+    ul
+      font-size: .9rem
+      list-style: circle
+      padding-left: 1.5rem
+
+  &.project--active
+    transform: rotateY(180deg)
+
+
+
+    .card-background
+      opacity: 1
+
+    .card-short
+      display: none
+
+    .card-long
+      display: block
+      transform: rotateY(180deg)
+
+  @media (min-width: 914px)
+    &.project--active
+      transform: rotateY(180deg)
+      flex-grow: 2
+      margin-left: 0
+      margin-right: 0
+
+    &.project--inactive
+      // opacity: .5
+      margin-left: .4rem
+      margin-right: .4rem
+      flex-grow: 0
+
+  @media only screen and (max-width: 321px) and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2)
+    &.project--active
+      transform: rotateY(0deg)
+
+      .card-background
+        opacity: 1
+
+      .card-short
+        display: none
+
+      .card-long
+        display: block
+        transform: rotateY(0deg)
+
+  @media only screen and (max-width: 480px) and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2)
+
+    &.project--active
+      transform: rotateY(0deg)
+
+      .card-background
+        opacity: 1
+
+      .card-short
+        display: none
+
+      .card-long
+        display: block
+        transform: rotateY(0deg)
+
+  .card-image
+    background:
+
+      position: center !important
+      size: cover !important
+
+    height: 150px
+    max-height: 150px
+    overflow: hidden
+    opacity: 1
+    transition: all 200ms ease-in-out
+
+  .card-header
+    background-color: $card-header-background
+    border-bottom: $card-border
+    border-radius: $base-border-radius $base-border-radius 0 0
+    font-weight: bold
+    line-height: 2.2rem
+    padding: ($base-spacing / 3) ($base-spacing / 2)
+    transition: all 0.2s ease-in-out
+
+  .title--project
+    text-transform: none
+
+  .project-sub-title
+
+    text-align: center
+
+  .card-copy
+    font-size: 0.9em
+    line-height: 1.5em
+    padding: ($base-spacing) ($base-spacing)
+
+    p
+      margin: 0 0 ($base-spacing / 2)
+
+
+
+  &:focus,
+  &:hover
+    cursor: pointer
+    box-shadow: 0 6px 14px rgba(black, .2)
+
+    .card-image
+      opacity: $card-image-hover-opacity
+
+
+
+  &:active
+    background-color: $card-background
+
+    .card-header
+      background-color: $card-background

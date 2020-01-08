@@ -1,0 +1,45 @@
+mixin news-item(title, date, content, readmore)
+  .news-item
+    h3.news-title= title
+    p.news-date= date
+    .news-content= content
+    p.read-more (#{readmore})
+section.startscreen#start
+  .flex.flex--center
+    .col-full
+      .start-logo
+      
+    .news-wrapper  
+      
+      //- a.toggle-news News
+        
+      .news-box
+        
+        {% assign posts = site.posts | where:'categories', 'news' %}
+        {% assign lang_posts=posts | where:'language', page.language | sort: 'date' | reverse %}
+        {% assign date-style=site.date-style | where:'language', page.language | first %}
+        {% assign read-more=site.read-more | where:'language', page.language | first %}
+        
+    
+          
+        {% for post in lang_posts %}
+        //- {% if post.visible != false and post.archive != true %}
+        //- .news-item-box.news(onclick='showFullNews(this)')
+          +news-item("{{post.title}}", "{{ post.date | date: date-style.format }}", "{{post.excerpt}}", "{{read-more.phrase}}")
+          
+          .news-item-full.news-inner
+                      
+            .news-content-wrapper
+              //- p {{post.visibile}}
+              h1 {{post.title}}
+              p.news-intro {{ post.date | date: date-style.format }}
+              .news-content {{post.content}}
+              
+              
+              .close-button 
+                a x
+              //-   .close-modal close
+        //- {% endif %}  
+        {% endfor %}
+    
+  

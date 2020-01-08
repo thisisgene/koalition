@@ -1,0 +1,408 @@
+.home-wrap
+  background: white
+
+  header
+    // width: 340px
+    background: white
+    // padding: 2rem 0 1rem
+    z-index: 5
+    .header-position
+      position: fixed
+      width: 200px
+      top: 3rem
+      left: 0
+      bottom: 3rem
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+
+    .logo
+      +hide-text
+      max-width: 156px
+      background:
+        image: url(../img/logo_big.png)
+        repeat: no-repeat
+        position: center
+        size: contain
+      height: 4rem
+      padding: 0
+      margin: 0 auto
+      opacity: 1
+      transform: scale(1)
+      transition: all 100ms ease-in-out
+
+
+      &.logo--invisible
+        opacity: 0
+        transform: scale(.3)
+
+        // @media (max-width: 800px)
+        //   opacity: 1
+        //   transform: scale(1)
+
+  .site-nav
+    position: relative
+
+    .nav-seperator
+
+      margin: 0 34px 0 40px
+      height: 1px
+      @include linear-gradient(to left, #ddd, white)
+      opacity: 0
+      animation: langFade 120ms 700ms ease-in-out forwards
+
+
+    ul
+      list-style: none
+      margin: 1rem 0
+      padding: 0 34px 0 0
+      text-align: right
+
+
+      .link--active, .language--active
+        color: $brand-color !important
+        border-bottom: 1px solid lighten($brand-color, 30%)
+        transition: all 300ms ease-in-out
+
+    .language-list
+      display: flex
+      justify-content: flex-end
+      opacity: 0
+      animation: langFade 120ms 30ms ease-in-out forwards
+      @keyframes langFade
+        0%
+          transform: translateY(-10px)
+          opacity: 0
+
+        100%
+          transform: translateY(0px)
+          opacity: 1
+
+
+      li
+        margin-left: .4rem
+
+
+        a
+          color: #ccc
+
+    .link-list
+      li
+        margin-bottom: 1rem
+        opacity: 0
+        line-height: 1
+        &:last-child
+          margin-bottom: 0
+          // margin-top: 1rem
+
+        .scroll-on-page-link
+          border-bottom: 1px solid transparent
+          transition: all 100ms ease-in-out
+
+          &.donate
+            display: block
+            max-width: 100px
+            float: right
+            // border: 1px solid darken($highlight-color, 10%)
+            padding: 4px 8px
+            box-shadow: 0px 0px 0px 1px darken($bg-main, 0%)
+            background: white
+            color: darken($bg-main, 0%)
+            // transform: scale(.9)
+            transform-origin: right
+            transition: all 200ms ease-in-out
+            cursor: pointer
+            font-weight: bold
+            width: auto
+            text-align: center
+            z-index: 5
+
+
+            &:hover
+              box-shadow: 0px 0px 1px 1px darken($bg-main, 10%)
+              background: $bg-main
+              color: white
+
+          .icon-gift
+            display: block
+            font-size: 2rem
+            line-height: 2rem
+            // margin-right: .4rem
+
+        @for $i from 1 through 8
+          &:nth-child(#{$i})
+            transform-origin: right
+            animation:
+              name: fadeIn
+              duration: 420ms
+              delay: 100ms + (70ms * $i - 100)
+              timing-function: ease-in-out
+              fill-mode: forwards
+
+        @keyframes fadeIn
+          0%
+            // transform: rotateZ(60deg)
+            opacity: 0
+
+          100%
+            // transform: rotateZ(0deg)
+            opacity: 1
+
+
+
+
+  .icon-box
+    position: relative
+    // bottom: 2rem
+    display: flex
+    justify-content: center
+    margin: 0 auto
+
+    &:before
+      transition: all 200ms ease-in-out
+      content: 'coming soon'
+      position: absolute
+      display: block
+      // top: 10px
+      width: 130px
+      padding: .6rem 1rem
+      text-align: center
+      background: rgba(white, .5)
+      font:
+        family: 'Roboto'
+        weight: bold
+      letter-spacing: .1rem
+      z-index: 10
+      opacity: 0
+
+    &:hover
+      &:before
+        opacity: 1
+
+    .icon
+      width: 30px
+      height: 30px
+      margin: 0 .6rem
+      cursor: pointer
+      border-radius: 50%
+      opacity: 0
+
+      filter: grayscale(1) blur(1px) opacity(.4)
+
+
+      @for $i from 1 through 3
+        &:nth-child(#{$i})
+          animation:
+            name: fadeInIcons
+            duration: 500ms
+            delay: 1600ms + (100ms * $i - 300)
+            timing-function: ease-in-out
+            fill-mode: forwards
+
+      @keyframes fadeInIcons
+        0%
+          transform: translateX(-30px)
+          opacity: 0
+
+        100%
+          transform: translateX(0px)
+          opacity: 1
+      +transition
+
+      &:hover
+        filter: grayscale(0) blur(0px) opacity(1)
+
+
+
+      &.icon--fb
+        background:
+          image: url(../img/icons/facebook.svg)
+
+      &.icon--tw
+        background:
+          image: url(../img/icons/twitter.svg)
+
+      &.icon--tg
+        background:
+          image: url(../img/icons/at.svg)
+
+  .mobile-nav-toggle
+    display: none
+    width: 50px
+    height: 50px
+    margin-right: .4rem
+    // background: pink
+    align-items: center
+    cursor: pointer
+    @media (max-width: 680px)
+      width: 30px
+      height: 30px
+
+    span,
+    span:before,
+    span:after
+      content: ''
+      display: block
+      height: 3px
+      width: 100%
+      background: #000
+      position: relative
+      +transition(all 300ms ease-out)
+
+      @media (max-width: 680px)
+        height: 1px
+
+
+
+    span:before
+      top: 15px
+      @media (max-width: 680px)
+        top: 10px
+
+    span:after
+      top: -17px
+      @media (max-width: 680px)
+        top: -11px
+
+
+    &.is-active span
+      background: transparent
+
+    &.is-active span:before,
+    &.is-active span:after
+      transform-origin: center
+      transform: rotate(45deg)
+      top: 3px
+      @media (max-width: 680px)
+        top: 1px
+
+
+    &.is-active span:after
+      transform: rotate(-45deg)
+      top: 0
+
+  .mobile-nav
+    // display: none
+    position: absolute
+    width: 100%
+    height: 100vh
+    // background: white
+    padding: 5rem 0 2.5rem
+    background: lighten(lightblue, 10%)
+    transform: translateY(-110%)
+    transition: all 300ms ease-out
+    z-index: 4
+    font-size: 1.2rem
+
+    display: flex
+    flex-direction: column
+    // justify-content: space-around
+    box-shadow: 0 1px 1px rgba(black, .2)
+
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+
+    .language-list
+      text-align: center
+      padding-bottom: .5rem
+      margin-bottom: 1rem
+      border-bottom: 1px solid #ddd
+
+      li
+        display: inline-block
+        padding: 0 .4rem
+        a
+          color: #aaa
+          &.language--active
+            color: $brand-color
+
+    .link-list
+      flex-grow: 1
+      li
+        text-align: center
+        margin-bottom: 1rem
+
+
+
+@media (max-width: 800px)
+  .home-wrap
+    header
+      width: auto
+      padding: 1rem 1rem 1rem 7rem
+      background: white
+      .header-position
+        position: relative
+        width: auto
+        top: auto
+        bottom: auto
+        left: auto
+        flex-direction: row
+        align-items: center
+        z-index: 5
+        display: flex
+
+
+      .site-nav,
+      .placeholder
+        display: none
+
+      .logo-link
+        display: none
+
+      .logo
+        height: 2.5rem
+        margin-left: -1rem
+        // display: none
+
+      .icon-box
+        // margin-left: 4.5rem
+        .icon
+
+          filter: grayscale(1) blur(0px) opacity(.4)
+
+      .mobile-nav-toggle
+        display: flex
+        margin-left: 2rem
+
+    .mobile-nav.is-active
+      display: block
+      transform: translateY(0%)
+
+  @media (max-width: 350px)
+    .home-wrap
+      header
+        padding: 1rem .5rem 1rem 5rem
+
+
+
+        .icon-box
+          // margin-left: 4.5rem
+          .icon
+            width: 20px
+            height: 20px
+
+        .mobile-nav-toggle
+          margin-left: 0rem
+
+      .mobile-nav.is-active
+        display: block
+        transform: translateY(0%)
+  // iPhone 4
+  @media only screen and (max-width: 480px) and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2)
+    .home-wrap
+      header
+        padding: 1rem .5rem 1rem 1.5rem
+
+        .mobile-nav-toggle
+  	      margin-left: -2.4rem
+
+
+  @media only screen and (max-width: 321px) and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2)
+    .home-wrap
+      header
+        padding: 1rem .5rem 1rem 1.5rem
+
+        .mobile-nav-toggle
+  	      margin-left: -2.4rem

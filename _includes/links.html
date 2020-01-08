@@ -1,0 +1,10 @@
+<section id="links" class="links"><div class="links-wrap"> <div class="flex flex--center"><div class="col-spread">{% assign pages = site.pages | where: 'ref', 'links' %}
+{% for this_page in pages %}
+{% if this_page.language == page.language %}<h1 class="title-text"> 
+{{this_page.title}}</h1><p class="lead-text"> 
+{{this_page.content}} </p>{% endif %}
+{% endfor %}</div></div><div class="flex flex--center"><div class="col-full"><div class="cards">{% assign posts = site.posts | where:'categories', 'links' %}
+{% assign lang_posts=posts | where:'language', page.language | sort: 'weight' %}
+{% assign read-more=site.read-more | where:'language', page.language | first %}
+{% for post in lang_posts %}<div onclick="activateProject(this)" class="card"><div style="background: url({{site.baseurl}}{{ post.image }})" class="card-background"></div><div class="card-short"> <div style="background: url({{site.baseurl}}{{ post.image }})" class="card-image"></div><div class="card-header"><div class="title-text small title--project">{{ post.title }}</div><div class="project-sub-title lead-text">{{ post.subtitle }}</div></div><div class="card-copy"><div> 
+{{ post.excerpt }}</div><div class="read-more">{{ read-more.phrase }}</div><div class="card-footer">{{ post.footer }}   </div></div></div><div class="project-item-full card-long"><div class="project-content-wrapper"><div class="title-text small title--project">{{post.title}}</div><div class="project-sub-title lead-text">{{ post.subtitle }}</div><div class="project-content">{{post.content}}</div></div></div></div>{% endfor %}</div></div></div></div></section>

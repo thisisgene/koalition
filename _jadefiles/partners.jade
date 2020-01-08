@@ -1,0 +1,22 @@
+section.partners#partners
+  
+  
+  {% assign pages = site.pages | where: 'ref', 'partners' %}
+  
+  
+  {% for this_page in pages %}
+  
+  {% if this_page.language == page.language %}
+
+
+  div
+    {{this_page.content}} 
+  
+  {% endif %}
+  
+  {% endfor %}
+ 
+  
+  //- .flex.flex--center
+  //- 
+  //-   

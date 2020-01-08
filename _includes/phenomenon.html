@@ -1,0 +1,5 @@
+<section id="phenomenon" class="section-phenomenon">
+  {% assign pages = site.pages | where: 'ref', 'phenomenon' %} {% for this_page
+  in pages %} {% if this_page.language == page.language %} {{this_page.content}}
+  {% endif %} {% endfor %}
+</section>

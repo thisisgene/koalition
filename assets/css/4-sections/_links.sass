@@ -1,0 +1,45 @@
+section.projects
+  padding: 0
+  color: #555
+  background:
+    color: $color-bg-projects
+    // image: url(../img/projects-bg.png)
+    // repeat: no-repeat
+    // size: cover
+    // position: center center
+    // attachment: fixed
+
+  // .title-text
+  //   color: $brand-color
+  //
+  //   &.small
+  //     color: #444
+
+  a
+    color: $bg-main
+
+    &:hover
+      color: $brand-color
+
+  .projects-wrap
+    padding: 3rem 0
+
+    .col-full
+      margin: 0
+      max-width: 920px
+
+    .col-spread
+      margin-bottom: 2rem
+
+    .read-more
+      text-align: center
+      color: #bbb
+      text-decoration: underline
+      margin-bottom: .6rem
+
+  @media (max-width: 800px)
+    .col-full
+      margin: 0
+
+      .cards
+        display: block !important

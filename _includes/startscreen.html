@@ -1,0 +1,5 @@
+<section id="start" class="startscreen"><div class="flex flex--center"><div class="col-full"><div class="start-logo"></div></div><div class="news-wrapper"> <div class="news-box">{% assign posts = site.posts | where:'categories', 'news' %}
+{% assign lang_posts=posts | where:'language', page.language | sort: 'date' | reverse %}
+{% assign date-style=site.date-style | where:'language', page.language | first %}
+{% assign read-more=site.read-more | where:'language', page.language | first %}
+{% for post in lang_posts %}{% endfor %}</div></div></div></section>

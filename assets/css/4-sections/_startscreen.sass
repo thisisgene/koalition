@@ -1,0 +1,348 @@
+section.startscreen
+  width: 100%
+  height: 100vh
+  background: white
+  display: flex
+  justify-content: center
+  padding: 0px
+
+
+  .flex
+    flex-direction: column
+    width: 100%
+
+    .col-full
+      align-self: center
+      width: 100%
+      perspective: 1000px
+      position: relative
+      // padding: 1rem
+
+      .start-logo
+        +hide-text
+        height: 6.4rem
+        width: calc(100% - 160px)
+        margin: 0
+        // +retina-image(../img/logo-pin, contain)
+        background:
+          image: url(../img/logo_big.png)
+          size: contain
+          repeat: no-repeat
+          position: center
+        opacity: 1
+        transform-origin: top
+        animation: logoFade 800ms ease-in-out
+
+        @keyframes logoFade
+          0%
+            opacity: 0
+            transform: scale(.8)
+
+          100%
+            opacity: 1
+            transform: scale(1)
+
+        @media (max-width: 980px)
+          height: 6rem
+          width: calc(100% - 220px)
+
+    .news-wrapper
+      position: absolute
+      top: 0
+      bottom: 2rem
+      right: 0
+      height: 100vh
+      width: 240px
+      padding-top: 1rem
+      padding-right: 2rem
+      font:
+        family: 'Roboto Condensed'
+        weight: lighter
+      color: #aaa
+      transform-origin: top right
+      opacity: 0
+      text-align: right
+
+      animation: newsFade 400ms 1800ms ease-in-out forwards
+
+      @keyframes newsFade
+        0%
+          opacity: 0
+
+        100%
+          opacity: 1
+
+      @media (max-width: 930px)
+        width: 200px
+
+
+      .toggle-news
+        text-align: right
+        font-size: 2rem
+        color: #888
+        // cursor: pointer
+        &:hover
+          color: #888
+
+      .news-box
+        text-align: left
+        font-family: 'Roboto Condensed'
+        +transition
+
+
+        a
+          color: darken(tint($brand-color, 60%), 10%)
+
+          &:hover,
+          &:focus
+            color: $brand-color
+
+        .news-item-box
+          *
+            font-family: 'Roboto Condensed' !important
+
+
+          .news-item
+            text-align: right
+            // opacity: 0
+            font-size: .9rem
+            // border-bottom: 1px solid #eee
+            color: #777 !important
+
+            &:hover
+              color: #444 !important
+              cursor: pointer
+
+
+            .news-title, .news-date, .news-content
+              // font-family: 'Roboto Condensed' !important
+
+
+              p
+                // font-family: 'Roboto Condensed'
+                line-height: 1.1rem
+
+            .read-more
+              // font-family: 'Roboto Condensed'
+              color: #aaa
+
+
+            .news-title
+              font-size: 1.1rem
+              font-weight: bold
+              margin-bottom: 0
+
+            .news-date
+              margin-top: -.4rem
+              // font-style: italic
+
+          .news-item-full
+            color: #444
+
+  @media (min-width: 801px)
+
+    .news-item-box
+
+      &.news--active
+
+        .news-item
+          // transform: scaleY(0)
+          // height: 0
+
+        .news-item-full
+
+          transform: translateX(-62%)
+          // height: auto
+
+      .news-item-full
+        border-left: 1px solid #ddd
+        padding: 1rem 2rem
+        background: #fff
+        box-shadow: -4px 0 16px rgba(black, .1)
+
+        // height: 0
+        transition: all 200ms ease-in-out
+        transform: translateX(100%)
+        transform-origin: right
+        width: 250%
+        +position(absolute, 0)
+
+        .close-button
+          position: absolute
+          top: 0px
+          right: 20px
+
+          a
+            font:
+              family: 'Helvetica Neue' !important
+              size: 3rem
+              weight: lighter
+            color: #888
+            cursor: pointer
+            &:hover
+              color: black
+
+        *
+          font-family: 'Roboto Condensed'
+
+
+  @media (max-width: 800px)
+    height: calc(100vh - 3.5rem)
+    .flex
+      align-items: center
+      justify-content: center
+      .col-full
+        margin: 0 auto
+        width: 90%
+
+        .start-logo
+          width: 100%
+          margin: -6rem auto 0
+
+      .news-wrapper
+        left: 0
+        right: 0
+        bottom: 0
+        top: 0
+        width: 100%
+        text-align: left
+        padding: 0
+
+
+        .toggle-news
+          text-align: left
+          color: #555
+          // padding-top: .5rem
+          padding: 0 1.5rem
+          border-radius: .2rem
+          margin: 0
+          z-index: 3
+          line-height: 5.2rem
+          z-index: 6 !important
+          font-size: 1.4rem
+
+          &.is-active
+            color: $brand-color
+
+
+
+        .news-box
+          background: #fff
+          border-bottom: 1px solid #ddd
+          // box-shadow: 0px 6px 15px -15px rgba(black, .1)
+          position: absolute
+          top: 50px
+          left: 0
+          right: 0
+          // bottom: 0
+          overflow: scroll
+          width: 100%
+          padding: 2rem 1rem
+
+          opacity: 0
+          pointer-events: none
+          transition: all 200ms ease-in-out
+
+          &.is-active
+            opacity: 1
+            pointer-events: auto
+
+          .news-item
+            text-align: left !important
+            color: #666 !important
+            // border-top: 1px solid #eee
+            z-index: 1000000
+            margin-bottom: .5rem
+            transition: all 200ms ease-in-out
+
+            // &:first-child
+            //   border-top: none
+
+            .news-title
+              border-bottom: 1px solid #eee
+
+              &:first-child
+                margin-top: 0
+
+            .news-date
+              margin-top: .3rem !important
+
+
+            .news-content
+              font-size: 1rem
+
+          .news-item-box
+
+            &.news--active
+
+              .news-item
+
+                transform: scaleY(0)
+                height: 0
+
+              .news-item-full
+                transform: translateY(0%)
+                pointer-events: all
+
+                height: auto
+                opacity: 1
+
+            .news-item-full
+
+              transition: all 200ms ease-in-out
+
+              opacity: 0
+              height: 0
+              transform: translateY(-100%)
+              pointer-events: none
+              border-bottom: 1px solid #eee
+              margin-bottom: .5rem
+
+              .close-button
+                display: none
+
+              p
+                color: #777 !important
+
+  @media (max-width: 680px)
+    .flex
+
+      .news-wrapper
+        .toggle-news
+          line-height: 4.15rem
+
+
+  @media (max-width: 400px)
+    .flex
+      .col-full
+        margin: 0 1rem
+
+        .start-logo
+          width: auto
+          // margin: -6rem 0 0
+
+  @media only screen and (max-width: 480px) and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2)
+    height: 320px
+    .flex
+      display: block
+      // padding-top: 100px
+
+      .col-full
+
+        margin-top: 0 auto
+        .start-logo
+          margin-top: 0 auto
+
+          width: 90%
+
+  @media only screen and (max-width: 321px) and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2)
+
+    height: 400px
+    .flex
+
+      .col-full
+
+        margin-top: -100px
+        .start-logo
+
+          width: 280px

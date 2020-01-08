@@ -1,0 +1,111 @@
+name: pin
+markdown: kramdown
+exclude: ['node_modules', 'gulpfile.js', 'package.json']
+
+title: Koalition gegen antimuslimischen Rassismus
+email: contact@pin.or.at
+description: > # this means to ignore newlines until "baseurl:"
+  Willkommen auf der offiziellen Seite der Koalition gegen antimuslimischen Rassismus.
+  Welcome to the official website of the Coalition against anti-muslim racism.
+
+baseurl: '' # /pin
+
+future: true
+# index:
+#   de:
+#   en: /en/
+
+date-style:
+  - language: de
+    format: '%d-%m-%Y'
+  - language: en
+    format: '%Y-%m-%d'
+
+read-more:
+  - language: de
+    phrase: 'Details anzeigen'
+  - language: en
+    phrase: 'Show details'
+
+nav:
+  # de
+  - language: de
+    index:
+    links:
+      - ref: about
+        title: Über uns
+        href: about
+
+      - ref: phenomenon
+        title: Phänomen
+        href: phenomenon
+
+      - ref: partners
+        title: Partner*innen
+        href: partners
+
+      - ref: network
+        title: Kontakt
+        href: network
+
+      - ref: links
+        title: Links & Literatur
+        href: links
+
+      - ref: newsletter
+        title: Aktuelles
+        href: newsletter
+
+      # - ref: contact
+      #   title: Kontakt
+      #   href: contact
+      # - ref: donate
+      #   title: Spenden
+      #   href: donate
+
+  # en
+  - language: en
+    index: en
+    links:
+      - ref: about
+        title: About us
+        href: about
+
+      - ref: projects
+        title: Projects
+        href: projects
+
+      - ref: partners
+        title: Partners
+        href: partners
+
+      - ref: network
+        title: Network
+        href: network
+
+      # - ref: archive
+      #   title: Archive
+      #   href: archive
+
+      - ref: newsletter
+        title: Newsletter
+        href: newsletter
+
+      # - ref: team
+      #   title: Team
+      #   href: team
+
+      - ref: contact
+        title: Contact
+        href: contact
+
+      - ref: donate
+        title: Donate
+        href: donate
+  # en:
+  #  about:
+  #   title: About us
+  #   href: about_us
+  #  projects:
+  #   title: Projects
+  #   href: projects

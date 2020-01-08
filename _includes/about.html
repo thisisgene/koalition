@@ -1,0 +1,6 @@
+<section id="about" class="section-about">{% assign pages = site.pages | where: 'ref', 'about' %}
+{% for this_page in pages %}
+{% if this_page.language == page.language %}
+{{this_page.content}}
+{% endif %}
+{% endfor %}</section>
