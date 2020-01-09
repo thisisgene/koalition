@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html lang={{page.language}}>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ site.title }}</title>
-        <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-        <meta name="viewport" content="width=device-width">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ site.title }}</title>
+  <meta name="description"
+    content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-        <!-- Google verification -->
-        <meta name="google-site-verification" content="u6mzEFPkp8pWrEMysWNZG7uqexc6ihIYWyXLw-2SZtA" />
+  <meta name="viewport" content="width=device-width">
 
-        <!-- favicons -->
+  <!-- Google verification -->
+  <meta name="google-site-verification" content="u6mzEFPkp8pWrEMysWNZG7uqexc6ihIYWyXLw-2SZtA" />
 
-        <link rel="shortcut icon" href="/assets/favicon.ico?" type="image/x-icon">
-        <link rel="icon" href="/assets/favicon.ico?" type="image/x-icon">
+  <!-- favicons -->
 
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href={{"/assets/css/0-tools/fontello/css/fontello.css" | prepend: site.baseurl}} >
-        <link rel="stylesheet" href={{"/assets/css/main.css" | prepend: site.baseurl}} >
+  <link rel="shortcut icon" href="/assets/favicon.ico?" type="image/x-icon">
+  <link rel="icon" href="/assets/favicon.ico?" type="image/x-icon">
 
 
-        <!-- javascript -->
-        <script type="text/javascript" src={{"/assets/js/jquery.min.js" | prepend: site.baseurl}} ></script>
-        <script type="text/javascript" src={{"/assets/js/modal.js" | prepend: site.baseurl}} ></script>
-        <script type="text/javascript" src={{"/assets/js/common.min.js" | prepend: site.baseurl}} ></script>
-
-        <!-- Piwik -->
-        <script type="text/javascript">
-          var _paq = _paq || [];
-          _paq.push(['trackPageView']);
-          _paq.push(['enableLinkTracking']);
-          (function() {
-            var u="//analytics.bawyl.com/";
-            _paq.push(['setTrackerUrl', u+'piwik.php']);
-            _paq.push(['setSiteId', '3']);
-            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-          })();
-        </script>
-        <noscript><p><img src="//analytics.bawyl.com/piwik.php?idsite=3" style="border:0;" alt="" /></p></noscript>
-        <!-- End Piwik Code -->
-    </head>
-    <body>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href={{"/assets/css/0-tools/fontello/css/fontello.css" | prepend: site.baseurl}}>
+  <link rel="stylesheet" href={{"/assets/css/main.css" | prepend: site.baseurl}}>
 
 
-          {{ content }}
+  <!-- javascript -->
 
 
-    </body>
+  <!-- Piwik -->
+  <script type="text/javascript">
+    var _paq = _paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function () {
+      var u = "//analytics.bawyl.com/";
+      _paq.push(['setTrackerUrl', u + 'piwik.php']);
+      _paq.push(['setSiteId', '3']);
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+  <noscript>
+    <p><img src="//analytics.bawyl.com/piwik.php?idsite=3" style="border:0;" alt="" /></p>
+  </noscript>
+  <!-- End Piwik Code -->
+</head>
+
+<body>
+
+
+  {{ content }}
+
+  <script type="text/javascript" src={{"/assets/js/jquery.min.js" | prepend: site.baseurl}}></script>
+  <script type="text/javascript" src={{"/assets/js/modal.js" | prepend: site.baseurl}}></script>
+  <script type="text/javascript" src={{"/assets/js/common.min.js" | prepend: site.baseurl}}></script>
+</body>
+
 </html>

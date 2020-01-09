@@ -1,4 +1,4 @@
-<section id="contact" class="contact">{% assign pages = site.pages | where: 'ref', 'contact' %}
+<section id="news" class="news">{% assign pages = site.pages | where: 'ref', 'news' %}
 {% for this_page in pages %}
 {% if this_page.language == page.language %}
 {{this_page.content}}

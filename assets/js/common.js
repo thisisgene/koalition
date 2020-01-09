@@ -91,6 +91,8 @@
       var currLink = $(this);
       var refElement = $(currLink.attr('href'));
       if (
+        refElement &&
+        refElement.position() &&
         refElement.position().top <= scrollPos &&
         refElement.position().top + refElement.outerHeight() - 10 > scrollPos &&
         clickToActivate !== true

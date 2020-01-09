@@ -1,14 +1,14 @@
-name: pin
+name: koalition
 markdown: kramdown
 exclude: ['node_modules', 'gulpfile.js', 'package.json']
 
 title: Koalition gegen antimuslimischen Rassismus
-email: contact@pin.or.at
+email: 
 description: > # this means to ignore newlines until "baseurl:"
   Willkommen auf der offiziellen Seite der Koalition gegen antimuslimischen Rassismus.
   Welcome to the official website of the Coalition against anti-muslim racism.
 
-baseurl: '/koalition' # ''
+baseurl: '' # '/koalition'
 
 future: true
 # index:
@@ -44,17 +44,17 @@ nav:
         title: Partner*innen
         href: partners
 
-      - ref: network
+      - ref: contact
         title: Kontakt
-        href: network
+        href: contact
 
       - ref: links
         title: Links & Literatur
         href: links
 
-      - ref: newsletter
+      - ref: news
         title: Aktuelles
-        href: newsletter
+        href: news
 
       # - ref: contact
       #   title: Kontakt
