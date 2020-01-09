@@ -56,12 +56,6 @@ nav:
         title: Aktuelles
         href: news
 
-      # - ref: contact
-      #   title: Kontakt
-      #   href: contact
-      # - ref: donate
-      #   title: Spenden
-      #   href: donate
 
   # en
   - language: en
@@ -71,37 +65,25 @@ nav:
         title: About us
         href: about
 
-      - ref: projects
-        title: Projects
-        href: projects
+      - ref: phenomenon
+        title: Phenomenon
+        href: phenomenon
 
       - ref: partners
         title: Partners
         href: partners
 
-      - ref: network
-        title: Network
-        href: network
-
-      # - ref: archive
-      #   title: Archive
-      #   href: archive
-
-      - ref: newsletter
-        title: Newsletter
-        href: newsletter
-
-      # - ref: team
-      #   title: Team
-      #   href: team
-
       - ref: contact
         title: Contact
         href: contact
 
-      - ref: donate
-        title: Donate
-        href: donate
+      - ref: links
+        title: Links & Literature
+        href: links
+
+      - ref: news
+        title: News
+        href: news
   # en:
   #  about:
   #   title: About us
