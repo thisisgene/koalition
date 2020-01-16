@@ -1477,10 +1477,11 @@ section.partners {
       -ms-flex-direction: column;
           flex-direction: column;
       color: white;
-      padding: 1.5rem 3rem;
-      text-align: center; }
+      padding: 1.5rem 1.5rem;
+      text-align: left; }
       section.partners .col-1 .col-content h1 {
-        color: #00BFB2; }
+        color: #00BFB2;
+        text-align: left; }
       section.partners .col-1 .col-content p {
         font-weight: 300;
         color: black; }

@@ -1,5 +1,5 @@
-<section id="start" class="startscreen"><div class="flex flex--center"><div class="col-full"><div class="start-logo"></div></div><div class="news-wrapper"> <div class="news-box">{% assign posts = site.posts | where:'categories', 'news' %}
+<section id="start" class="startscreen"><div class="flex flex--center"><div class="col-full"><div class="start-logo"></div></div><div class="news-wrapper"> <a class="toggle-news">News</a><div class="news-box">{% assign posts = site.posts | where:'categories', 'news' %}
 {% assign lang_posts=posts | where:'language', page.language | sort: 'date' | reverse %}
 {% assign date-style=site.date-style | where:'language', page.language | first %}
 {% assign read-more=site.read-more | where:'language', page.language | first %}
-{% for post in lang_posts %}{% endfor %}</div></div></div></section>
+{% for post in lang_posts %}<div onclick="showFullNews(this)" class="news-item-box news"><div class="news-item"><h3 class="news-title">{{post.title}}</h3><p class="news-date">{{ post.date | date: date-style.format }}</p><div class="news-content">{{post.excerpt}}</div><p class="read-more">({{read-more.phrase}})</p></div><div class="news-item-full news-inner"><div class="news-content-wrapper"><h1>{{post.title}}</h1><p class="news-intro">{{ post.date | date: date-style.format }}</p><div class="news-content">{{post.content}}</div><div class="close-button"> <a>x</a></div></div></div></div>{% endfor %}</div></div></div></section>
