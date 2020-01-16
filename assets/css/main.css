@@ -1736,8 +1736,8 @@ section.contact {
     margin: 0rem; }
 
 footer {
-  background: black;
-  color: white;
+  background: #fff;
+  color: black;
   padding: 5rem 1rem 2rem;
   position: fixed;
   bottom: 0;
@@ -1748,7 +1748,7 @@ footer {
       left: 0; } }
   footer .footer-wrapper {
     text-align: center;
-    color: #777; }
+    color: #222; }
 
 section#impressum {
   padding: 2rem 1rem;

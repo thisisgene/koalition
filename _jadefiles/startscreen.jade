@@ -23,14 +23,12 @@ section.startscreen#start
     
           
         {% for post in lang_posts %}
-        //- {% if post.visible != false and post.archive != true %}
         .news-item-box.news(onclick='showFullNews(this)')
           +news-item("{{post.title}}", "{{ post.date | date: date-style.format }}", "{{post.excerpt}}", "{{read-more.phrase}}")
           
           .news-item-full.news-inner
                       
             .news-content-wrapper
-              //- p {{post.visibile}}
               h1 {{post.title}}
               p.news-intro {{ post.date | date: date-style.format }}
               .news-content {{post.content}}
@@ -38,8 +36,6 @@ section.startscreen#start
               
               .close-button 
                 a x
-              //-   .close-modal close
-        //- {% endif %}  
         {% endfor %}
     
   
