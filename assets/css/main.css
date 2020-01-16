@@ -1336,7 +1336,7 @@ section.startscreen {
       padding: 0 1.5rem !important; } }
 
 .section-about {
-  background: #649db3;
+  background: #7cacbf;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -1346,10 +1346,10 @@ section.startscreen {
   .section-about .col-lead {
     transition: all 0.15s ease-out 0s; }
   .section-about .title-text {
-    color: white;
+    color: #333;
     margin-bottom: 3rem; }
   .section-about .lead-text {
-    color: #fff;
+    color: #333;
     font-size: 1.1rem;
     margin: 4rem 0; }
   .section-about .button-cta {
@@ -1364,7 +1364,7 @@ section.startscreen {
     overflow: hidden; }
     .section-about #about-block .block {
       display: none;
-      background: #649db3;
+      background: #7cacbf;
       position: relative; }
       .section-about #about-block .block:before {
         content: '';
@@ -1405,7 +1405,7 @@ section.startscreen {
           border-bottom: 1px solid rgba(255, 255, 255, 0.4);
           display: inline-block;
           margin: .4rem 0 .2rem 0;
-          color: #fff; }
+          color: #333; }
         .section-about #about-block .block .col-full .lead-text {
           color: #333;
           text-align: left;
