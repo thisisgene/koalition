@@ -8,10 +8,16 @@ section.partners#partners
   
   {% if this_page.language == page.language %}
 
+  
 
   div
     {{this_page.content}} 
-  
+    //- {% assign partners=site.data.partners.partnerlist | where: 'language', page.language %}
+    //- {% for list in partners %}
+    //- {% for partner in list.list %}
+    //- p {{partner.name}}
+    //- {% endfor %}
+    //- {% endfor %}
   {% endif %}
   
   {% endfor %}

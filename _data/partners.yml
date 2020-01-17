@@ -1,0 +1,25 @@
+
+partnerlist:
+  - language: de
+    list:
+      - name: Andreas Peham, DÖW
+        description: 'Rechtsextremismusforscher im Dokumentationsarchiv des österreichischen Widerstandes (<a href="http://www.doew.at">www.doew.at</a>'
+
+      - name: Dokustelle - Islamfeindlichkeit und antimuslimischer Rassismus
+        description: 'Die Dokustelle, Dokumenations- und Beratungsstelle – Islamfeindlichkeit und Antimuslimischer Rassismus, wurde am 10. Dezember 2014, dem internationalen Tag der Menschenrechte, als ein NGO gegründet. Somit ist die Dokustelle
+        die erste und die einzige NGO, die ausschließlich Islamfeindlichkeit und antimuslimischen Rassismus erfasst. Das
+        Team der Dokustelle besteht ausschließlich aus ehrenamtlichen Mitarbeiterinnen und Mitarbeitern mit
+        unterschiedlichen professionellen Hintergründen.'
+  
+  
+  
+  - language: en
+    list:
+      - name: TEST, DÖW
+        description: 'Rechtsextremismusforscher im Dokumentationsarchiv des österreichischen Widerstandes (<a href="http://www.doew.at">www.doew.at</a>'
+
+      - name: Dokustelle - Islamfeindlichkeit und antimuslimischer Rassismus
+        description: 'Die Dokustelle, Dokumenations- und Beratungsstelle – Islamfeindlichkeit und Antimuslimischer Rassismus, wurde am 10. Dezember 2014, dem internationalen Tag der Menschenrechte, als ein NGO gegründet. Somit ist die Dokustelle
+        die erste und die einzige NGO, die ausschließlich Islamfeindlichkeit und antimuslimischen Rassismus erfasst. Das
+        Team der Dokustelle besteht ausschließlich aus ehrenamtlichen Mitarbeiterinnen und Mitarbeitern mit
+        unterschiedlichen professionellen Hintergründen.'
