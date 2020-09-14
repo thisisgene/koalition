@@ -1,0 +1,4 @@
+<section id="supporters" class="supporters">{% assign pages = site.pages | where: 'ref', 'supporters' %}
+{% for this_page in pages %}
+{% if this_page.language == page.language %}<div>{{this_page.content}} </div>{% endif %}
+{% endfor %}</section>

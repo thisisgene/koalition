@@ -8,7 +8,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Willkommen auf der offiziellen Seite der Koalition gegen antimuslimischen Rassismus.
   Welcome to the official website of the Coalition against anti-muslim racism.
 
-baseurl: '' # '/koalition'
+baseurl: '/koalition' # ''
 
 future: true
 # index:
@@ -44,6 +44,10 @@ nav:
         title: Partner*innen
         href: partners
 
+      - ref: supporters
+        title: Unterstützende
+        href: supporters
+
       - ref: contact
         title: Kontakt
         href: contact
@@ -72,6 +76,10 @@ nav:
       - ref: partners
         title: Partners
         href: partners
+
+      - ref: supporters
+        title: Supporters
+        href: supporters
 
       - ref: contact
         title: Contact
