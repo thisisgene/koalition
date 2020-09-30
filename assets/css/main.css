@@ -644,11 +644,11 @@ p {
       text-indent: 101%;
       white-space: nowrap;
       max-width: 156px;
-      background-image: url(../img/logo.png);
+      background-image: url(../img/Koalition_gegen-antimuslimischen-Rassismus_Logo.png);
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      height: 4rem;
+      height: 5rem;
       padding: 0;
       margin: 0 auto;
       opacity: 1;
@@ -1026,10 +1026,10 @@ section.startscreen {
         overflow: hidden;
         text-indent: 101%;
         white-space: nowrap;
-        height: 6.4rem;
+        height: 12.4rem;
         width: calc(100% - 120px);
         margin: 0;
-        background-image: url(../img/logo.png);
+        background-image: url(../img/Koalition_gegen-antimuslimischen-Rassismus_Logo.png);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
