@@ -2150,17 +2150,16 @@ section.socialmedia .feed-container {
             align-items: center;
         margin: 1rem 0; }
         section.socialmedia .feed-container.showFeedContainer .feed {
-          margin: 1rem auto;
-          width: 400px; }
+          margin: 1rem auto; }
           section.socialmedia .feed-container.showFeedContainer .feed > div {
             max-width: 100%; } }
     @media (max-width: 400px) {
       section.socialmedia .feed-container.showFeedContainer .feed {
-        width: 300px; } }
+        width: 300px; }
+        section.socialmedia .feed-container.showFeedContainer .feed iframe {
+          width: 100%; } }
   section.socialmedia .feed-container .feed {
     margin: 0 .3rem; }
-    section.socialmedia .feed-container .feed iframe {
-      width: 100%; }
     section.socialmedia .feed-container .feed.twitter {
       height: 500px;
       overflow-y: scroll; }
