@@ -1,0 +1,36 @@
+section.socialmedia#socialmedia
+  .flex.flex--center
+    .col-lead
+      h1.title-text Social Media
+
+  
+      {% assign tabs=site.tabs | where:'language', page.language %}
+      .tab-container
+        {% for tab in tabs %}
+        {% for link in tab.links %}
+        {% if link.initClass == 'showFeedContainer' %}
+        button(onclick=`{{ link.ref | prepend: 'openFeed(this, "' | append: '")' }}`).button-cta.inline.activeFeed {{link.title}}
+        {% else %}
+        button(onclick=`{{ link.ref | prepend: 'openFeed(this, "' | append: '")' }}`).button-cta.inline {{link.title}}
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+      {% for tab in tabs %}
+      {% for link in tab.links %}
+      .feed-container(id="{{ link.ref }}", class="{{ link.initClass }}")
+        {% for media in link.socialmedia %}
+        {% if media.type=='twitter' %}
+
+        .feed.twitter#twitter(data-link="{{media.href}}")
+          a(class="twitter-timeline", href='#{{media.href}}') Tweets by dokustelle
+        {% endif %}
+        {% if media.type=='facebook' %}
+      
+        .feed.facebook#facebook(data-link="{{media.href}}")
+
+          <iframe src="{{ media.href | prepend: 'https://www.facebook.com/plugins/page.php?' | append: '2F&tabs=timeline&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId' }}" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        {% endif %}
+        {% endfor %}
+      {% endfor %}
+      {% endfor %}
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

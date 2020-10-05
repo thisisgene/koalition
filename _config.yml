@@ -8,7 +8,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Willkommen auf der offiziellen Seite der Koalition gegen antimuslimischen Rassismus.
   Welcome to the official website of the Coalition against anti-muslim racism.
 
-baseurl: '/koalition' # ''
+baseurl: '' # '/koalition'
 
 future: true
 # index:
@@ -60,7 +60,6 @@ nav:
       #   title: Aktuelles
       #   href: news
 
-
   # en
   - language: en
     index: en
@@ -89,13 +88,21 @@ nav:
         title: Links & Literature
         href: links
 
-      # - ref: news
-      #   title: News
-      #   href: news
-  # en:
-  #  about:
-  #   title: About us
-  #   href: about_us
-  #  projects:
-  #   title: Projects
-  #   href: projects
+tabs: 
+  - language: de
+    links:
+    - ref: "dokustelle"
+      title: Dokustelle
+      initClass: "showFeedContainer"
+      socialmedia:
+        - type: twitter
+          href: https://twitter.com/dokustelle?ref_src=twsrc%5Etfw
+        - type: facebook
+          href: href=https%3A%2F%2Fwww.facebook.com%2FDokustelleOesterreich%2F
+    - ref: "zara"
+      title: ZARA - Zivilcourage & Anti-Rassismus-Arbeit
+      socialmedia:
+        - type: twitter
+          href: https://twitter.com/Verein_ZARA?ref_src=twsrc%5Etfw
+        - type: facebook
+          href: href=https%3A%2F%2Fwww.facebook.com%2Fzara.or.at%2F

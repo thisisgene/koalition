@@ -1,4 +1,6 @@
+
 (function ($) {
+
   var cookie = readCookie('language');
 
   if (cookie !== null && cookie != '/') {
@@ -129,6 +131,13 @@
     // console.log();
   };
 
+  openFeed = function (obj, ref) {
+    $('.activeFeed').removeClass('activeFeed')
+    $('.showFeedContainer').removeClass('showFeedContainer')
+    const container = document.getElementById(ref)
+    $('#' + ref).addClass('showFeedContainer')
+    $(obj).addClass('activeFeed')
+  }
   // scrollBackground = function() {
   //   var wScroll = $(window).scrollTop(),
   //       bgElementParticipate = $('.col--partners'),

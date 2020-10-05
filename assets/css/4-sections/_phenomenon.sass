@@ -1,38 +1,53 @@
 $about-border-radius: 20px
 
 .section-phenomenon
-  background: #fff
+  background: $main-white
   // @include linear-gradient(to left, lighten($aqua, 28%), lighten($aqua, 12%))
   // min-height: 100vh
   display: flex
   justify-content: center
   flex-direction: column
+  // padding: 0 !important
+  // margin: 0 !important
+  // padding-top: -3px
 
   // padding: 0 !important
 
+  // .flex--center
+  //   margin-top: -2px
+  //   background: $main-white
+  //   clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 92%)
   .col-lead
-    +transition
+    
+    
+    // +transition
+    padding: 2rem .5rem
+    
 
 
   .title-text
-    color: #111
+    color: $main-black
     margin-bottom: 3rem
+    text-align: right
 
   .lead-text
-    color: #222
+    text-align: right
+    color: $main-black
     // text-align: center
     font-size: 1.1rem
     margin: 4rem 0
 
   .button-cta
-    // background: rgba(white, .5)
-    border: 1px solid $bg-main
-    margin: 3rem 0
+    background: $main-white
+    border: 1px solid $main-gold
+    color: $main-black
+    // margin: 3rem auto
     transform: scale(1)
+    float: right
 
     &:hover
-      background: darken($bg-main, 10%)
-
+      background: $main-gold
+      color: $main-black
     &.hidden
       display: none
 
@@ -47,7 +62,7 @@ $about-border-radius: 20px
       // padding: 2rem 0 0
       // position: absolute
       display: none
-      background: #fff
+      background: $main-white
 
       position: relative
 
@@ -99,10 +114,10 @@ $about-border-radius: 20px
           border-bottom: 1px solid transparentize(#fff, 0.6)
           display: inline-block
           margin: .4rem 0 .2rem 0
-          color: #111
+          color: $main-black
 
         .lead-text
-          color: $black
+          color: $main-black
           text-align: left
           font-size: 1rem
 

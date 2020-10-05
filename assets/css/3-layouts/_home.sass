@@ -1,18 +1,21 @@
+@import '../0-tools/colors'
+
 .home-wrap
   display: flex
   overflow: hidden
+  background: $main-white
 
   @media (max-width: 800px)
     display: block
-    background: white
+    background: $main-white
 
 .main-wrapper
   flex: 1
   position: relative
-  margin-bottom: 205px
+  margin-bottom: 275px
   margin-left: 200px
   z-index: 2
-  background: white
+  background: $main-white
 
 .home-sections
 
@@ -85,7 +88,17 @@
 @media (max-width: 800px)
   .main-wrapper
     margin-left: 0
-    margin-bottom: 245px
+    margin-bottom: 295px
+
+@media (max-width: 530px)
+  .main-wrapper
+    margin-bottom: 355px
+@media (max-width: 390px)
+  .main-wrapper
+    margin-bottom: 400px
+@media (max-width: 320px)
+  .main-wrapper
+    margin-bottom: 490px
 
 
 @media (max-width: 640px)

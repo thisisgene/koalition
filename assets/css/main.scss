@@ -1,5 +1,7 @@
 @import "bourbon";
 
+@import "sal";
+
 @import "0-tools/neat/neat";
 @import "0-tools/normalize";
 @import "0-tools/colors";
@@ -22,10 +24,12 @@
 @import "4-sections/about";
 @import "4-sections/links";
 @import "4-sections/partners";
+@import "4-sections/supporters";
 @import "4-sections/donate";
 @import "4-sections/archive";
 @import "4-sections/newsletter";
 @import "4-sections/network";
 @import "4-sections/contact";
+@import "4-sections/socialmedia";
 @import "4-sections/footer";
 @import "4-sections/impressum";
