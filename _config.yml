@@ -52,6 +52,10 @@ nav:
         title: Kontakt
         href: contact
 
+      - ref: socialmedia
+        title: Social Media
+        href: socialmedia
+
       - ref: links
         title: Links & Literatur
         href: links
