@@ -2044,7 +2044,7 @@ section.startscreen .flex .news-wrapper .news-box .news-item-box .news-item-full
 .section-about .col-lead {
   -webkit-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
-  width: 50%;
+  width: 90%;
 }
 
 .section-about .title-text {
@@ -2162,7 +2162,9 @@ section.startscreen .flex .news-wrapper .news-box .news-item-box .news-item-full
 
 @media (max-width: 640px) {
   .section-about .col-lead {
-    margin: 0 1rem;
+    margin: 0;
+    padding: 0 1.5rem !important;
+    width: 100%;
   }
   .section-about .col-full {
     padding: 0 1.5rem !important;
