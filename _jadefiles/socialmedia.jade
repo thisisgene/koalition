@@ -5,14 +5,14 @@ section.socialmedia#socialmedia
 
   
       {% assign tabs=site.tabs | where:'language', page.language %}
-      .tab-container
+      .tab-container#btn-container
         {% for tab in tabs %}
         {% for link in tab.links %}
-        {% if link.initClass == 'showFeedContainer' %}
-        button(onclick=`{{ link.ref | prepend: 'openFeed(this, "' | append: '")' }}`).button-cta.inline.activeFeed {{link.title}}
-        {% else %}
-        button(onclick=`{{ link.ref | prepend: 'openFeed(this, "' | append: '")' }}`).button-cta.inline {{link.title}}
-        {% endif %}
+        //- {% if link.initClass == 'showFeedContainer' %}
+        //- button(id="btn-{{ link.ref }}" onclick=`{{ link.ref | prepend: 'openFeed(this, "' | append: '")' }}`).button-cta.inline.activeFeed {{link.title}}
+        //- {% else %}
+        button(data-btnid="{{ link.ref }}" onclick=`{{ link.ref | prepend: 'openFeed(this, "' | append: '")' }}`).sm-button.button-cta.inline {{link.title}}
+        //- {% endif %}
         {% endfor %}
         {% endfor %}
       {% for tab in tabs %}
@@ -22,7 +22,7 @@ section.socialmedia#socialmedia
         {% if media.type=='twitter' %}
 
         .feed.twitter#twitter(data-link="{{media.href}}")
-          a(class="twitter-timeline", href='#{{media.href}}') Tweets by dokustelle
+          a(class="twitter-timeline", href='#{{media.href}}')
         {% endif %}
         {% if media.type=='facebook' %}
       
