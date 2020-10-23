@@ -28,7 +28,7 @@ section.socialmedia#socialmedia
       
         .feed.facebook#facebook(data-link="{{media.href}}")
 
-          <iframe src="{{ media.href | prepend: 'https://www.facebook.com/plugins/page.php?' | append: '2F&tabs=timeline&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"' }}" width="400" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+          <iframe src="{{ media.href | prepend: 'https://www.facebook.com/plugins/page.php?href=' | append: '2F&tabs=timeline&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"' }}" width="400" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
         {% endif %}
         {% endfor %}
       {% endfor %}

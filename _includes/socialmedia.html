@@ -15,7 +15,7 @@
         {% if media.type=='twitter' %}
         <div id="twitter" data-link="{{media.href}}" class="feed twitter"><a href="#{{media.href}}" class="twitter-timeline"></a></div>{% endif %}
         {% if media.type=='facebook' %}
-        <div id="facebook" data-link="{{media.href}}" class="feed facebook"><iframe src="{{ media.href | prepend: 'https://www.facebook.com/plugins/page.php?' | append: '2F&tabs=timeline&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"' }}" width="400" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>{% endif %}
+        <div id="facebook" data-link="{{media.href}}" class="feed facebook"><iframe src="{{ media.href | prepend: 'https://www.facebook.com/plugins/page.php?href=' | append: '2F&tabs=timeline&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"' }}" width="400" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>{% endif %}
         {% endfor %}
       </div>{% endfor %}
       {% endfor %}

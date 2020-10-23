@@ -102,32 +102,32 @@ tabs:
           - type: twitter
             href: https://twitter.com/dokustelle?ref_src=twsrc%5Etfw
           - type: facebook
-            href: href=https%3A%2F%2Fwww.facebook.com%2FDokustelleOesterreich%2F
-      - ref: "zara"
-        title: ZARA - Zivilcourage & Anti-Rassismus-Arbeit
-        socialmedia:
-          - type: twitter
-            href: https://twitter.com/Verein_ZARA?ref_src=twsrc%5Etfw
-          - type: facebook
-            href: href=https%3A%2F%2Fwww.facebook.com%2Fzara.or.at%2F
+            href: https://www.facebook.com/DokustelleOesterreich/
       - ref: "mjo"
         title: Muslimische Jugend Österreich
         socialmedia:
           - type: twitter
             href: https://twitter.com/muslimyouth?ref_src=twsrc%5Etfw
           - type: facebook
-            href: href=https%3A%2F%2Fwww.facebook.com%2Fmjoe.at%2F
+            href: https://www.facebook.com/mjoe.at/
       - ref: "ferit"
         title: Farid Hafez
         socialmedia:
           - type: twitter
             href: https://twitter.com/ferithafez?ref_src=twsrc%5Etfw
           - type: facebook
-            href: href=https%3A%2F%2Fwww.facebook.com%2Fferithafez%2F
+            href: https://www.facebook.com/ferithafez/
       - ref: "idb"
         title: IDB
         socialmedia:
           - type: twitter
             href: https://twitter.com/idb_oesterreich?ref_src=twsrc%5Etfw
           - type: facebook
-            href: href=https%3A%2F%2Fwww.facebook.com%2Fdiskriminierungsfrei.at%2F
+            href: https://www.facebook.com/diskriminierungsfrei.at/
+      - ref: "zara"
+        title: ZARA - Zivilcourage & Anti-Rassismus-Arbeit
+        socialmedia:
+          - type: twitter
+            href: https://twitter.com/Verein_ZARA?ref_src=twsrc%5Etfw
+          - type: facebook
+            href: https://www.facebook.com/zara.or.at/
