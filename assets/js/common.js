@@ -195,6 +195,21 @@
     }
   };
 
+  randomizeFeed = () => {
+
+    let buttons = document.getElementsByClassName('sm-button')
+    let btnCount = buttons.length
+    let rndm = Math.floor(Math.random() * btnCount)
+   
+    for (let i=0; i<btnCount; i++) {
+   
+      if (i == rndm) {
+        openFeed(buttons[i], buttons[i].dataset.btnid)
+      }
+    }
+   
+  }
+
   $(window).scroll(function () {
     showLogoOnScroll();
     makeLinksActive();
@@ -206,6 +221,8 @@
     toggleMobileMenu();
     toggleMobileNews();
     setCookie();
+
+    randomizeFeed();
 
     $('.about-cta').click(function () {
       $('.block--about').toggleClass('is-open');

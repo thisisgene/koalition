@@ -1,10 +1,24 @@
-<section id="socialmedia" class="socialmedia"><div class="flex flex--center"><div class="col-lead"><h1 class="title-text">Social Media</h1>{% assign tabs=site.tabs | where:'language', page.language %}<div class="tab-container">{% for tab in tabs %}
-{% for link in tab.links %}
-{% if link.initClass == 'showFeedContainer' %}<button onclick="{{ link.ref | prepend: 'openFeed(this, &quot;' | append: '&quot;)' }}" class="button-cta inline activeFeed">{{link.title}}</button>{% else %}<button onclick="{{ link.ref | prepend: 'openFeed(this, &quot;' | append: '&quot;)' }}" class="button-cta inline">{{link.title}}</button>{% endif %}
-{% endfor %}
-{% endfor %}</div>{% for tab in tabs %}
-{% for link in tab.links %}<div id="{{ link.ref }}" class="feed-container {{ link.initClass }}">{% for media in link.socialmedia %}
-{% if media.type=='twitter' %}<div id="twitter" data-link="{{media.href}}" class="feed twitter"><a href="#{{media.href}}" class="twitter-timeline">Tweets by dokustelle</a></div>{% endif %}
-{% if media.type=='facebook' %}<div id="facebook" data-link="{{media.href}}" class="feed facebook"><iframe src="{{ media.href | prepend: 'https://www.facebook.com/plugins/page.php?' | append: '2F&tabs=timeline&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"' }}" width="400" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>{% endif %}
-{% endfor %}</div>{% endfor %}
-{% endfor %}</div></div><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></section>
+
+<section id="socialmedia" class="socialmedia">
+  <div class="flex flex--center">
+    <div class="col-lead">
+      <h1 class="title-text">Social Media</h1>{% assign tabs=site.tabs | where:'language', page.language %}
+      <div id="btn-container" class="tab-container">
+        {% for tab in tabs %}
+        {% for link in tab.links %}
+        <button data-btnid="{{ link.ref }}" onclick="{{ link.ref | prepend: 'openFeed(this, &quot;' | append: '&quot;)' }}" class="sm-button button-cta inline">{{link.title}}</button>{% endfor %}
+        {% endfor %}
+      </div>{% for tab in tabs %}
+      {% for link in tab.links %}
+      <div id="{{ link.ref }}" class="feed-container {{ link.initClass }}">
+        {% for media in link.socialmedia %}
+        {% if media.type=='twitter' %}
+        <div id="twitter" data-link="{{media.href}}" class="feed twitter"><a href="#{{media.href}}" class="twitter-timeline"></a></div>{% endif %}
+        {% if media.type=='facebook' %}
+        <div id="facebook" data-link="{{media.href}}" class="feed facebook"><iframe src="{{ media.href | prepend: 'https://www.facebook.com/plugins/page.php?href=' | append: '2F&tabs=timeline&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"' }}" width="400" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>{% endif %}
+        {% endfor %}
+      </div>{% endfor %}
+      {% endfor %}
+    </div>
+  </div><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</section>
