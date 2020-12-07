@@ -124,6 +124,13 @@ tabs:
             href: https://twitter.com/idb_oesterreich?ref_src=twsrc%5Etfw
           - type: facebook
             href: https://www.facebook.com/diskriminierungsfrei.at/
+      - ref: "nmz"
+        title: NMZ
+        socialmedia:
+          - type: twitter
+            href: https://twitter.com/dieanderenNet?ref_src=twsrc%5Etfw
+          - type: facebook
+            href: https://www.facebook.com/NetzwerkMZ/
       - ref: "zara"
         title: ZARA - Zivilcourage & Anti-Rassismus-Arbeit
         socialmedia:
