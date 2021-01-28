@@ -2036,7 +2036,7 @@ section.startscreen .flex .news-wrapper .news-box .news-item-box .news-item-full
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #b71955;
+  background: #8A1340;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 92%, 91% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 92%, 91% 100%, 0 100%);
 }
@@ -2084,7 +2084,7 @@ section.startscreen .flex .news-wrapper .news-box .news-item-box .news-item-full
 
 .section-about #about-block .block {
   display: none;
-  background: #b71955;
+  background: #8A1340;
   position: relative;
 }
 
@@ -2215,7 +2215,7 @@ section.links .links-wrap .read-more {
 }
 
 section.partners {
-  background-color: #b71955;
+  background-color: #8A1340;
   min-height: 600px;
   color: #FFF;
 }
@@ -2653,7 +2653,7 @@ section.network .network-list {
 }
 
 section.contact {
-  background: #b71955;
+  background: #8A1340;
   padding: 4rem 0;
   color: #0E0100;
 }

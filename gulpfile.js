@@ -1,15 +1,15 @@
-var gulp        = require('gulp'),
+var gulp = require('gulp'),
     browserSync = require('browser-sync'),
-    sass        = require('gulp-sass'),
-    prefix      = require('gulp-autoprefixer'),
-    minifycss   = require('gulp-minify-css'),
-    jshint      = require('gulp-jshint'),
-    concat      = require('gulp-concat'),
-    uglify      = require('gulp-uglify'),
-    rename      = require('gulp-rename'),
-    cp          = require('child_process'),
-    jade        = require('gulp-jade'),
-    bourbon     = require('bourbon').includePaths;
+    sass = require('gulp-sass'),
+    prefix = require('gulp-autoprefixer'),
+    minifycss = require('gulp-minify-css'),
+    jshint = require('gulp-jshint'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
+    rename = require('gulp-rename'),
+    cp = require('child_process'),
+    jade = require('gulp-jade'),
+    bourbon = require('bourbon').includePaths;
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -22,7 +22,7 @@ var messages = {
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
     var pl = process.platform === "win32" ? "jekyll.bat" : "jekyll";
-    return cp.spawn(pl, ['build'], {stdio: 'inherit'})
+    return cp.spawn(pl, ['build'], { stdio: 'inherit' })
         .on('close', done);
 });
 
@@ -38,8 +38,11 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'js', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'js', 'jekyll-build'], function () {
     browserSync({
+        ui: {
+            port: 3080
+        },
         server: {
             baseDir: '_site'
         },
@@ -52,17 +55,17 @@ gulp.task('browser-sync', ['sass', 'js', 'jekyll-build'], function() {
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('sass', function () {
-    return gulp.src('assets/css/main.scss')
+    return gulp.src('./assets/css/main.scss')
         .pipe(sass({
             includePaths: [bourbon],
             onError: browserSync.notify
         }).on('error', sass.logError))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-    //     .pipe(rename({suffix: '.min', prefix : ''}))
-		// .pipe(minifycss())
+        //     .pipe(rename({suffix: '.min', prefix : ''}))
+        // .pipe(minifycss())
 
         .pipe(gulp.dest('_site/assets/css'))
-        .pipe(browserSync.reload({stream:true}))
+        .pipe(browserSync.reload({ stream: true }))
         .pipe(gulp.dest('assets/css'));
 });
 
@@ -70,26 +73,26 @@ gulp.task('sass', function () {
 /**
  * Compile Jade
  */
-gulp.task('jade', function() {
+gulp.task('jade', function () {
     return gulp.src('_jadefiles/*.jade')
-    .pipe(jade())
-    .pipe(gulp.dest('_includes'));
+        .pipe(jade())
+        .pipe(gulp.dest('_includes'));
 });
 
 
 /*
 ** JS Task
 */
-gulp.task('js', function() {
-  return gulp.src('assets/js/common.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'))
-    .pipe(concat('common.js'))
-    .pipe(gulp.dest('assets/js'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(uglify())
-    .pipe(gulp.dest('assets/js'))
-    .pipe(gulp.dest('_site/assets/js'));
+gulp.task('js', function () {
+    return gulp.src('assets/js/common.js')
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'))
+        .pipe(concat('common.js'))
+        .pipe(gulp.dest('assets/js'))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(uglify())
+        .pipe(gulp.dest('assets/js'))
+        .pipe(gulp.dest('_site/assets/js'));
 });
 
 
