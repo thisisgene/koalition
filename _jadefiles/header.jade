@@ -1,14 +1,20 @@
 mixin nav-content()
 	ul(title="Other languages coming soon!").language-list
-		{% assign languages = site.nav %}
-		{% for lang in languages %}
-		{% if lang.language == page.language %} {% assign has_class='language--active' %} {% else %} {% assign has_class='' %} {% endif %}
+		//- {% assign languages = site.nav %}
+		//- {% for lang in languages %}
+		//- {% if lang.language == page.language %} {% assign has_class='language--active' %} {% else %} {% assign has_class='' %} {% endif %}
 
-		li
-			//- a(class='header-link lang-link {{has_class}}' href='{{site.baseurl}}/{{lang.index}}') {{lang.language}} 
-			a {{lang.language}} 
-		{% endfor %}
-		
+		//- li
+		//- 	//- a(class='header-link lang-link {{has_class}}' href='{{site.baseurl}}/{{lang.index}}') {{lang.language}} 
+		//- 	a {{lang.language}} 
+		//- {% endfor %}
+		li 
+			a de
+		li 
+			a en
+		li 
+			a ar
+
 	.nav-seperator
 		
 	ul.link-list

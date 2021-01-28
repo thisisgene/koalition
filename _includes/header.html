@@ -1,11 +1,9 @@
 
 <div class="mobile-nav">
   <ul title="Other languages coming soon!" class="language-list">
-    {% assign languages = site.nav %}
-    {% for lang in languages %}
-    {% if lang.language == page.language %} {% assign has_class='language--active' %} {% else %} {% assign has_class='' %} {% endif %}
-    <li><a>{{lang.language}} </a>
-    </li>{% endfor %}
+    <li> <a>de</a></li>
+    <li> <a>en</a></li>
+    <li> <a>ar</a></li>
   </ul>
   <div class="nav-seperator"></div>
   <ul class="link-list">{% assign navigation=site.nav | where:'language', page.language %}{% for nav in navigation %}
@@ -22,11 +20,9 @@
       <h1 class="logo logo--invisible">pin</h1></a>
     <nav class="site-nav">
       <ul title="Other languages coming soon!" class="language-list">
-        {% assign languages = site.nav %}
-        {% for lang in languages %}
-        {% if lang.language == page.language %} {% assign has_class='language--active' %} {% else %} {% assign has_class='' %} {% endif %}
-        <li><a>{{lang.language}} </a>
-        </li>{% endfor %}
+        <li> <a>de</a></li>
+        <li> <a>en</a></li>
+        <li> <a>ar</a></li>
       </ul>
       <div class="nav-seperator"></div>
       <ul class="link-list">{% assign navigation=site.nav | where:'language', page.language %}{% for nav in navigation %}
