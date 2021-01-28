@@ -1,13 +1,45 @@
-<div class="mobile-nav"><ul class="language-list">{% assign languages = site.nav %}
-{% for lang in languages %}
-{% if lang.language == page.language %} {% assign has_class='language--active' %} {% else %} {% assign has_class='' %} {% endif %}<li><a href="{{site.baseurl}}/{{lang.index}}" class="header-link lang-link {{has_class}}">{{lang.language}} </a></li>{% endfor %}</ul><div class="nav-seperator"></div><ul class="link-list">{% assign navigation=site.nav | where:'language', page.language %}{% for nav in navigation %}
-{% for link in nav.links %}<li>{% if link.href != 'archive' %}<a href="#{{link.href}}" onclick('hideArchive()')="onclick('hideArchive()')" class="{{link.href}} header-link scroll-on-page-link"> 
-{% if link.href=='donate' %}<i id="donate-icon" class="icon-gift"></i>{% endif %}
-{{link.title}}</a>{% else %}<a href="#{{link.href}}" onclick="showArchive()" class="header-link">{{link.title}}</a>{% endif %}</li>{% endfor %}
-{% endfor %} </ul></div><header><div class="header-position"><a href="#start" class="scroll-on-page-link logo-link"><h1 class="logo logo--invisible">pin</h1></a><nav class="site-nav"><ul class="language-list">{% assign languages = site.nav %}
-{% for lang in languages %}
-{% if lang.language == page.language %} {% assign has_class='language--active' %} {% else %} {% assign has_class='' %} {% endif %}<li><a href="{{site.baseurl}}/{{lang.index}}" class="header-link lang-link {{has_class}}">{{lang.language}} </a></li>{% endfor %}</ul><div class="nav-seperator"></div><ul class="link-list">{% assign navigation=site.nav | where:'language', page.language %}{% for nav in navigation %}
-{% for link in nav.links %}<li>{% if link.href != 'archive' %}<a href="#{{link.href}}" onclick('hideArchive()')="onclick('hideArchive()')" class="{{link.href}} header-link scroll-on-page-link"> 
-{% if link.href=='donate' %}<i id="donate-icon" class="icon-gift"></i>{% endif %}
-{{link.title}}</a>{% else %}<a href="#{{link.href}}" onclick="showArchive()" class="header-link">{{link.title}}</a>{% endif %}</li>{% endfor %}
-{% endfor %} </ul></nav><div class="icon-box social-media"></div><div class="mobile-nav-toggle"><span></span></div></div></header>
+
+<div class="mobile-nav">
+  <ul title="Other languages coming soon!" class="language-list">
+    {% assign languages = site.nav %}
+    {% for lang in languages %}
+    {% if lang.language == page.language %} {% assign has_class='language--active' %} {% else %} {% assign has_class='' %} {% endif %}
+    <li><a>{{lang.language}} </a>
+    </li>{% endfor %}
+  </ul>
+  <div class="nav-seperator"></div>
+  <ul class="link-list">{% assign navigation=site.nav | where:'language', page.language %}{% for nav in navigation %}
+    {% for link in nav.links %}
+    <li>{% if link.href != 'archive' %}<a href="#{{link.href}}" onclick('hideArchive()')="onclick('hideArchive()')" class="{{link.href}} header-link scroll-on-page-link">
+         
+        {% if link.href=='donate' %}<i id="donate-icon" class="icon-gift"></i>{% endif %}
+        {{link.title}}</a>{% else %}<a href="#{{link.href}}" onclick="showArchive()" class="header-link">{{link.title}}</a>{% endif %}</li>{% endfor %}
+    {% endfor %} 
+  </ul>
+</div>
+<header>
+  <div class="header-position"><a href="#start" class="scroll-on-page-link logo-link">
+      <h1 class="logo logo--invisible">pin</h1></a>
+    <nav class="site-nav">
+      <ul title="Other languages coming soon!" class="language-list">
+        {% assign languages = site.nav %}
+        {% for lang in languages %}
+        {% if lang.language == page.language %} {% assign has_class='language--active' %} {% else %} {% assign has_class='' %} {% endif %}
+        <li><a>{{lang.language}} </a>
+        </li>{% endfor %}
+      </ul>
+      <div class="nav-seperator"></div>
+      <ul class="link-list">{% assign navigation=site.nav | where:'language', page.language %}{% for nav in navigation %}
+        {% for link in nav.links %}
+        <li>{% if link.href != 'archive' %}<a href="#{{link.href}}" onclick('hideArchive()')="onclick('hideArchive()')" class="{{link.href}} header-link scroll-on-page-link">
+             
+            {% if link.href=='donate' %}<i id="donate-icon" class="icon-gift"></i>{% endif %}
+            {{link.title}}</a>{% else %}<a href="#{{link.href}}" onclick="showArchive()" class="header-link">{{link.title}}</a>{% endif %}</li>{% endfor %}
+        {% endfor %} 
+      </ul>
+    </nav>
+    <div class="icon-box social-media">
+    </div>
+    <div class="mobile-nav-toggle"><span></span></div>
+  </div>
+</header>

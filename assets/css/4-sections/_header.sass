@@ -1,5 +1,14 @@
 @import '../0-tools/colors'
 
+@keyframes langFade
+  0%
+    transform: translateY(-10px)
+    opacity: 0
+
+  100%
+    transform: translateY(0px)
+    opacity: 1
+
 .home-wrap
   background: $main-white
 
@@ -67,20 +76,16 @@
         transition: all 300ms ease-in-out
 
     .language-list
+      
+
       display: flex
       justify-content: flex-end
       opacity: 0
       animation: langFade 120ms 30ms ease-in-out forwards
-      @keyframes langFade
-        0%
-          transform: translateY(-10px)
-          opacity: 0
-
-        100%
-          transform: translateY(0px)
-          opacity: 1
+      
 
 
+      cursor: pointer
       li
         margin-left: .4rem
 
